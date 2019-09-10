@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please choose one of the options below to play against the robot!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P29-5J-G7A">
-                                <rect key="frame" x="0.0" y="74" width="414" height="418"/>
+                                <rect key="frame" x="0.0" y="74" width="414" height="318"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Oh-qF-vDa">
-                                <rect key="frame" x="0.0" y="592" width="414" height="220"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Oh-qF-vDa" userLabel="Rock+Paper+Scissors">
+                                <rect key="frame" x="0.0" y="492" width="414" height="220"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOb-Ag-vt9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -62,23 +62,63 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-JL-wNu" userLabel="user win streak + counter">
+                                <rect key="frame" x="15" y="765" width="136" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win streak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGk-k2-LYV">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrj-q4-Fym">
+                                        <rect key="frame" x="0.0" y="46" width="136" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yo3-ge-Wve" userLabel="CPU win streak + counter">
+                                <rect key="frame" x="324" y="770" width="60" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjZ-x6-kCG" userLabel="CPU">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-V4-dlt" userLabel="CPU win counter">
+                                        <rect key="frame" x="0.0" y="46" width="60" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Oh-qF-vDa" firstAttribute="top" secondItem="P29-5J-G7A" secondAttribute="bottom" constant="100" id="AY4-Rt-R1C"/>
                             <constraint firstItem="P29-5J-G7A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="D0j-0C-Oku"/>
                             <constraint firstItem="P29-5J-G7A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D8z-N0-O7F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yo3-ge-Wve" secondAttribute="trailing" constant="30" id="FAg-X5-7k7"/>
+                            <constraint firstItem="lVN-JL-wNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="FIY-Sk-GXa"/>
                             <constraint firstItem="2Oh-qF-vDa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiB-Fl-Aub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yo3-ge-Wve" secondAttribute="bottom" constant="10" id="LJ0-a0-YIN"/>
                             <constraint firstItem="P29-5J-G7A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uj8-ig-Ulk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Oh-qF-vDa" secondAttribute="bottom" constant="50" id="WYF-tP-sfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Oh-qF-vDa" secondAttribute="bottom" constant="150" id="WYF-tP-sfC"/>
                             <constraint firstItem="2Oh-qF-vDa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dMg-Qt-KLr"/>
                             <constraint firstItem="P29-5J-G7A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAZ-Lb-Xbu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Oh-qF-vDa" secondAttribute="trailing" id="o6I-du-1Dh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lVN-JL-wNu" secondAttribute="bottom" constant="15" id="wg2-UC-HI3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cpu_win_counter" destination="hIX-V4-dlt" id="ot9-sc-hbJ"/>
                         <outlet property="result" destination="P29-5J-G7A" id="dAC-So-chA"/>
+                        <outlet property="user_win_counter" destination="Qrj-q4-Fym" id="o14-cv-S6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
